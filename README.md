@@ -1,64 +1,89 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Laravel Blog App
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A simple blog platform built with **Laravel 8**, where users can view posts from others and manage their own posts after logging in.
 
-## About Laravel
+<img width="1536" height="971" alt="Web Preview" src="https://github.com/user-attachments/assets/df468537-befe-4da8-b9f9-2442b177a8ac" />
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<img width="1536" height="971" alt="Web Preview" src="https://github.com/user-attachments/assets/9a27089e-1816-44b4-90d6-a0f78d1f1337" />
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<img width="1536" height="971" alt="Web Preview" src="https://github.com/user-attachments/assets/3cbaccc0-75de-4c01-99ee-3a46f576b518" />
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 💻 Key Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* **Post Viewing:** View all blog posts from different users.
+* **User Authentication:** Securely log in and register to access personal features.
+* **Post Management:** Create, edit, and delete your own blog posts.
+* **Responsive Design:** The layout is optimized for a seamless experience on all devices, from desktops to mobile phones.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🚀 How to Run the Project
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Follow these steps to get the project up and running on your local machine using **Laravel Valet**.
 
-### Premium Partners
+### Prerequisites
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Make sure you have the following installed and configured:
 
-## Contributing
+* **PHP 7.3**
+* **Composer**
+* **MySQL 5.7**
+* **Laravel Valet** (configured on macOS)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Installation
 
-## Code of Conduct
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/laravel-blog-app.git](https://github.com/your-username/laravel-blog-app.git)
+    cd laravel-blog-app
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+2.  **Install Composer dependencies:**
+    ```bash
+    composer install
+    ```
 
-## Security Vulnerabilities
+3.  **Configure the `.env` file:**
+    -   Duplicate the `.env.example` file and rename it to `.env`.
+    -   Follow the configuration instructions below.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+4.  **Run Database Migrations:**
+    ```bash
+    php artisan migrate
+    ```
+    
+5.  **Create Symbolic Link:**
+    ```bash
+    php artisan storage:link
+    ```
 
-## License
+6.  **Start the Valet Development Server:**
+    -   Link the project directory to Valet:
+        ```bash
+        valet link
+        ```
+    The project will now be live at `https://blog-app.test`.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## ⚙️ .env File Configuration
+
+After copying the `.env.example` file to `.env`, you need to add and configure several variables to run the application correctly.
+
+This section **must** be filled out for the application to connect to your database. Make sure you have created a MySQL database with the same name you enter here.
+
+```env
+APP_NAME=Laravel Blog App
+APP_URL=https://laravel-blog-app.test
+
+FAKER_LOCALE=id_ID
+FILESYSTEM_DRIVER=public
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=root
+DB_PASSWORD=
