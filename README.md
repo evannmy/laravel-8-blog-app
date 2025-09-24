@@ -37,7 +37,7 @@ Make sure you have the following installed and configured:
 1.  **Clone the repository:**
     ```bash
     git clone https://github.com/evannmy/laravel-8-blog-app.git
-    cd laravel-blog-app
+    cd laravel-8-blog-app
     ```
 
 2.  **Install Composer dependencies:**
