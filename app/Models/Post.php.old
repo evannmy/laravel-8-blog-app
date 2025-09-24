@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Models;
+
+class Post
+{
+    // use HasFactory;
+    private static $blogPosts = [
+        [
+            'title' => 'First Post',
+            'slug' => 'first-post',
+            'author' => 'Evan',
+            'body' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos deleniti quasi et fuga officia est tempora quod praesentium, ipsum quos consequatur ex. Reprehenderit nulla numquam soluta facere placeat aut, quisquam dignissimos consequatur, laboriosam rem maiores officia quam. Illum rem iure, odio, rerum enim iusto distinctio quasi nam quidem id veritatis!'
+        ],
+        [
+            'title' => 'Second Post',
+            'slug' => 'second-post',
+            'author' => 'Dika',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ad blanditiis consequatur aliquam animi fugiat pariatur, quia molestiae nam nihil nemo et modi beatae est tempore doloribus consectetur, in eligendi alias odio aperiam nisi esse commodi. Deserunt, voluptatem. Excepturi sapiente nihil nesciunt, et ratione non totam necessitatibus, fuga culpa voluptatem tenetur quas maxime error consectetur iure, possimus facere molestias? Nesciunt?'
+        ]
+    ];
+
+    public static function all() {
+        return collect(self::$blogPosts);
+    }
+
+    public static function find($slug) {
+        $blogPosts = self::all();
+
+        $postDetail = $blogPosts->firstWhere('slug', $slug);
+
+        // $postDetail = [];
+        // foreach($blogPosts as $post) {
+        //     if ($post['slug'] == $slug) {
+        //         $postDetail = $post;
+        //     }
+        // }
+
+        return $postDetail;
+    }
+}
