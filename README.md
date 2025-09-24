@@ -60,6 +60,7 @@ Make sure you have the following installed and configured:
     ```
 
 6.  **Start the Valet Development Server:**
+   
     Link the project directory to Valet:
     ```bash
     valet link
