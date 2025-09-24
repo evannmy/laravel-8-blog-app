@@ -60,11 +60,11 @@ Make sure you have the following installed and configured:
     ```
 
 6.  **Start the Valet Development Server:**
-    -   Link the project directory to Valet:
-        ```bash
-        valet link
-        ```
-    The project will now be live at `https://blog-app.test`.
+    Link the project directory to Valet:
+    ```bash
+    valet link
+    ```
+    The project will now be live at `https://laravel-8-blog-app.test`.
 
 ---
 
