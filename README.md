@@ -36,7 +36,7 @@ Make sure you have the following installed and configured:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/laravel-blog-app.git](https://github.com/your-username/laravel-blog-app.git)
+    git clone https://github.com/evannmy/laravel-8-blog-app.git
     cd laravel-blog-app
     ```
 
